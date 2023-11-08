@@ -1,0 +1,24 @@
+
+@font-face {
+	font-family: 'Celtic Garamond';
+	src: url('/fonts/CelticGaramond.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Blacker Text';
+	src: url('/fonts/BlackerText-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blacker Text';
+	src: url('/fonts/BlackerText-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+:root {
+	--font-celtic-garamond: 'Celtic Garamond';
+	--font-blacker-text: 'Blacker Text';
+}

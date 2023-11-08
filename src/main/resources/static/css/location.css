@@ -1,0 +1,16 @@
+
+.location .title {
+	font-family: var(--font-celtic-garamond);
+	font-size: 20pt;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.location .title .name::first-letter {
+	font-size: 1.5em;
+}
+
+.location .introduction {
+	font-family: var(--font-blacker-text);
+	font-style: italic;
+}

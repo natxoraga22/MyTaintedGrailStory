@@ -9,8 +9,15 @@
 	<!-- -------- -->
 	<div th:fragment="location(location)" th:object="${location}" th:id="|location_*{id}|" class="location">
 		<!-- Title -->
-		<div class="title">
-			<h1>[[*{id}]] - [[*{name}]]</h1>
+		<h1 class="title gap-3" bs:flex bs:flexAlign="baseline">
+			<div class="id">[[*{id}]]</div>
+			<div>-</div>
+			<div class="name">[[*{name}]]</div>
+		</h1>
+
+		<!-- Introduction -->
+		<div class="introduction">
+			[[*{introduction}]]
 		</div>
 	</div>
 </body>
