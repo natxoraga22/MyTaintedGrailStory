@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- -------- -->
+	<!-- LOCATION -->
+	<!-- -------- -->
+	<div th:fragment="location(location)" th:object="${location}" th:id="|location_*{id}|" class="location">
+		<!-- Title -->
+		<div class="title">
+			<h1>[[*{id}]] - [[*{name}]]</h1>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+{
+	"id": 101,
+	"name": "Cuanacht",
+	"introduction": "Un profundo sentimiento de pérdida invade todo Cuanacht, desde los asentamientos en ruinas hasta los ojos hundidos de los que han permanecido en la ciudad. El menhir del mercado casi se ha apagado y todo aquel lo suficientemente valiente o ingenioso se ha marchado para encontrar una solución.",
+	
+	"actions": [
+		{
+			"requirements": [{ "secret": 66 }],
+			"goToVerse": "4"
+		},
+		{
+			"requirements": [{ "status": { "name": "La marca del cazador" } }],
+			"goToVerse": "6"
+		},
+		{
+			"action": "Visitas a las familias de los campeones de la primera expedición",
+			"description": "Si quieres encontrarlos, podría serte útil saber más de ellos",
+			"goToVerse": "1"
+		},
+		{
+			"action": "Pides a los lugareños que te ayuden a prepararte",
+			"goToVerse": "3"
+		},
+		{
+			"action": "Pasas el día descansando en tu propia casa",
+			"goToVerse": "5"
+		},
+		{
+			"action": "Paseas por los callejones dominados por la Rareza",
+			"requirements": [{ "menhir": false }],
+			"goToVerse": "9"
+		}
+	],
+	
+	"verses": {
+		"1": {
+			"text": "En este largo invierno, casi todos aquí han perdido a un amigo o a un miembro de la familia. Primero, por la falta de comida. Luego, por enfermedad. Y, por último, los cinco pilares restantes de la comunidad, los únicos héroes que esta tierra había conocido jamás, se marcharon de repente. Ahora, al mirar a los distantes ojos de los últimos residentes, te das cuenta de que quieren olvidar.",
+			"actions": [
+				{
+					"action": "Haces que hablen con hidromiel",
+					"description": "Hay una antigua costumbre: aquellos que viajan lejos de su hogar deben pasar la noche en vela al volver. Mantener la tradición en honor de todos los que se fueron con la expedición y no volverán no será barato",
+					"goToVerse": "2"
+				},
+				{
+					"action": "Les pides que compartan sus problemas",
+					"requirements": [{ "attribute": { "name": "Empatía", "level": 1 } }],
+					"goToVerse": "2"
+				}
+			]
+		},
+		"2": {
+			"text": "Se necesita tiempo para romper el silencio de la gente afligida, pero, una vez conseguido, las historias de separaciones y partidas te inundan como una lluvia torrencial. Tratas de recordar cada detalle. El color del caballo palafrén que la sacerdotisa del pueblo, Neante, montaba. El adorno en la cota de malla que el joven Lord Yvain llevaba. El extraño cuerno para beber que Erfyr, el herrero, solía llevar a todas partes. La marca de nacimiento de Fael, el maestro cazador. La capa bordada de Aubert, el experimentado viajero que había visto todas las partes de la isla. ¿Quién sabe qué detalle puede ayudarte por el camino?",
+			"rewards": [
+				{ "status": { "name": "El destino de la expedición", "parts": [1] } }
+			],
+			"endExploration": true
+		},
+		"3": {
+			"text": "Aunque les queda poco, comparten contigo las últimas provisiones que les quedan. De algún modo, esto parece indigno de un héroe, pero ahora que todos los verdaderos héroes han caído, ¿quién se atreverá a cuestionar tus métodos?",
+			"endExploration": true
+		},
+		"4": {
+			"text": "Algunas personas de Cuanacht no se lo toman muy bien.",
+			"testResults": {
+				"1-3": {
+					"text": "Los palos y las piedras duelen, pero que tu propia gente se haya vuelto en tu contra es aún más doloroso.",
+					"endExploration": true
+				},
+				"4-5": {
+					"text": "Consigues salir y escapar.",
+					"endExploration": true
+				},
+				"6+": {
+					"text": "Les das una buena lección. Tal vez demasiado buena: no dejas de golpearlos hasta que uno cae muerto en un charco de sangre.",
+					"endExploration": true
+				}
+			}
+		},
+		"5": {
+			"text": "Muchos se negarían a llamar «hogar» a este sitio, pero el entorno familiar te brinda la serenidad que tanto necesitas. Mientras descansas en tu cama, no puedes evitar preguntarte si es la última noche que pasarás bajo este techo.",
+			"endExploration": true
+		},
+		"6": {
+			"text": "<p>Tres mujeres lloran frente a una larga sala. Una de ellas ha perdido recientemente a su hija de ocho años, descuartizada como un animal en las colinas a las afueras de Cuanacht.</p><p>Sientes cómo tus piernas se debilitan. Los vagos recuerdos de la cacería nocturna te queman ahora la mente como hierro candente. Te tropiezas, tratando de no mirar las caras de los que visten el luto.</p>",
+			"rewards": [
+				{ "status": { "name": "Canción de luto", "parts": [1] } }
+			],
+			"actions": [
+				{ 
+					"action": "Visitas a las familias de los campeones de la primera expedición",
+					"goToVerse": "1"
+				},
+				{
+					"action": "Pides a los lugareños que te ayuden a prepararte",
+					"goToVerse": "3"
+				},
+				{
+					"action": "Pasas el día descansando en tu propia casa",
+					"goToVerse": "5"
+				},
+				{
+					"action": "Paseas por los callejones dominados por la Rareza",
+					"requirements": [
+						{ "custom": "No hay menhir" }
+					],
+					"goToVerse": "9"
+				},
+				{
+					"action": "Te vas",
+					"endExploration": true
+				}
+			]
+		},
+		"9": {
+			"text": "<p>La estatua del mercado se ha apagado. Las calles cambian lentamente de posición. Las casas que recuerdas desde tu infancia desaparecen o se alejan. Extrañas figuras vagan en la oscuridad. Los días y las noches se funden y se entremezclan.</p><p>Tras seis siglos, esta tierra vuelve finalmente a la Rareza y se lleva a todos con ella. Algunos habitantes de la ciudad se escondieron en los más profundo que pudieron y los demás se marcharon aterrados en busca de otro menhir. No te queda mucho tiempo hasta que la locura y los horrores sobrenaturales se apoderen de ti.</p>",
+			"actions": [
+				{
+					"action": "Te vas del asentamiento",
+					"endExploration": true
+				},
+				{
+					"action": "Sigues deambulando por sus calles",
+					"goToBosVerse": "215"
+				}
+			]
+		}
+	},
+	"dream": {
+		"text": "En tu inquieto sueño, una pálida dama emerge del agua, sus ojos del colores de la leche y la piel dañada por la podredumbre. Te susurra algo al oído. Su aliento huele a sal, a alga marina y a pescado podrido. Apenas recuerdas las palabras. Dijo algo sobre tres enigmas, uno escondido bajo la isla de los muertos, otro preso por manos y brazos quemados y otro enterrado en un túmulo cubierto de niebla. Pero, ¿qué podría significar?"
+	},
+	"nightmare": {
+		"text": "<p>En tu sueño, una sierpe del tamaño de una montaña se eleva desde el oeste, con la piel brillando con todos los colores del arcoíris. Se acerca, abriendo sus mandíbulas como si estuviera a punto de tragarse el asentamiento entero. Extrañamente, la gente en las calles de Cuanacht ni siquiera mira a la criatura. Te están mirando A TI, con tristeza y desilusión.</p><p>«Nos dijiste que todo iría bien...», llora una niña pequeña.</p><p>Te despiertas y no logras volver a dormirte hasta el amanecer.</p>"
+	}
+}
