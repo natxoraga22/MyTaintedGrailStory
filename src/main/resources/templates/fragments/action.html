@@ -7,14 +7,32 @@
 	<!-- ------ -->
 	<!-- ACTION -->
 	<!-- ------ -->
-	<div th:fragment="action(action)" th:object="${action}" class="action">
-		<!-- Icon -->
-		<i class="bi bi-circle"></i>
-		
+	<div th:fragment="action(action, icon)" th:object="${action}" class="action">
 		<!-- Text -->
-		<span class="text">[[*{action}]] -</span>
+		<i class="bi bullet" th:classappend="${icon}"></i>
+		<span class="text">[[*{action}]]</span>
 		
 		<!-- Requirements -->
+		<span th:if="*{!#lists.isEmpty(requirements)}" class="requirements" bs:inlineFlex>
+			<strong>[</strong>
+			<th:block th:each="requirement : *{requirements}" th:object="${requirement}">
+				<span th:if="*{status} != null">
+					<i class="bi bi-check-lg text-success align-middle"></i> Estado <strong>«[[*{status.name}]]»</strong>
+				</span>
+				<span th:if="*{secret} != null">
+					<i class="bi bi-check-lg text-success align-middle"></i> Secreto <strong>«[[*{secret.name}]]» ([[*{secret.id}]])</strong>
+				</span>
+				<span th:if="*{menhir} != null">
+					<i th:if="*{menhir}" class="bi bi-check-lg text-success align-middle"></i>
+					<i th:if="*{!menhir}" class="bi bi-x-lg text-danger align-middle"></i>
+					<strong>Menhir</strong>
+				</span>
+			</th:block>
+			<strong>]</strong>
+		</span>
+
+		<!-- Dash -->
+		<i class="bi bi-dash"></i>
 
 		<!-- Description -->
 		<span th:if="*{description}" class="description">[[*{description}]].</span>

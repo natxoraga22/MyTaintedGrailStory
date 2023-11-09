@@ -19,6 +19,7 @@ public class Location {
 	private String name;
 	private String introduction;
 
+	private List<Action> redirects;
 	private List<Action> actions;
 
 	private Map<String,Verse> verses;

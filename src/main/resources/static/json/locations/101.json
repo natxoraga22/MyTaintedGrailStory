@@ -3,7 +3,7 @@
 	"name": "Cuanacht",
 	"introduction": "Un profundo sentimiento de pérdida invade todo Cuanacht, desde los asentamientos en ruinas hasta los ojos hundidos de los que han permanecido en la ciudad. El menhir del mercado casi se ha apagado y todo aquel lo suficientemente valiente o ingenioso se ha marchado para encontrar una solución.",
 
-	"actions": [
+	"redirects": [
 		{
 			"requirements": [{ "secret": { "id": 66 }}],
 			"goToVerse": "4"
@@ -11,7 +11,10 @@
 		{
 			"requirements": [{ "status": { "name": "La marca del cazador" }}],
 			"goToVerse": "6"
-		},
+		}
+	],
+
+	"actions": [
 		{
 			"action": "Visitas a las familias de los campeones de la primera expedición",
 			"description": "Si quieres encontrarlos, podría serte útil saber más de ellos",
@@ -24,6 +27,11 @@
 		{
 			"action": "Pasas el día descansando en tu propia casa",
 			"goToVerse": "5"
+		},
+		{
+			"action": "Paseas por los callejones dominados por la Rareza",
+			"requirements": [{ "menhir": false }],
+			"goToVerse": "9"
 		}
 	],
 

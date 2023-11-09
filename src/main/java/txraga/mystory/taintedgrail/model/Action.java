@@ -1,5 +1,6 @@
 package txraga.mystory.taintedgrail.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.Getter;
@@ -17,7 +18,7 @@ public class Action {
 	private String action;
 	private String description;
 
-	private List<Requirement> requirements;
+	private List<Requirement> requirements = new ArrayList<>();
 
 	private String goToVerse;
 

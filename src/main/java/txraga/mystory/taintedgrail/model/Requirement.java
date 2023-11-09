@@ -14,5 +14,6 @@ public class Requirement {
 
 	private Status status;
 	private Secret secret;
+	private Boolean menhir;
 
 }

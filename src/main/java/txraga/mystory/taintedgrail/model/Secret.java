@@ -13,5 +13,6 @@ import lombok.ToString;
 public class Secret {
 
 	private int id;
+	private String name;
 
 }

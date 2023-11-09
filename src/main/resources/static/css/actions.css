@@ -11,14 +11,14 @@
 
 .actions .action {
 	margin-left: 1rem;
-	line-height: 22px;
+	line-height: 20px;
 }
 
-.actions .action .bi-circle {
+.actions .action .bullet {
 	margin-right: 0.25rem;
 	font-size: 0.5em;
-	line-height: 24px;
-	vertical-align: text-top;
+	line-height: 18px;
+	vertical-align: text-bottom;
 }
 
 .actions .action .text {
@@ -31,9 +31,18 @@
 .actions .action .description {
 	font-family: var(--font-blacker-text);
 	font-style: italic;
-	font-size: 11pt;
+	font-size: 10.5pt;
 }
 
 .actions .action .go-to-verse {
+	font-family: var(--font-alegreya);
+}
+
+
+/* ------------ */
+/* REQUIREMENTS */
+/* ------------ */
+
+.requirements {
 	font-family: var(--font-alegreya);
 }

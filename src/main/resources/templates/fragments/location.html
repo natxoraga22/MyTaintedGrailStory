@@ -20,10 +20,17 @@
 			[[*{introduction}]]
 		</div>
 
+		<!-- Redirects -->
+		<div class="actions">
+			<th:block th:each="redirect : *{redirects}">
+				<th:block th:replace="~{fragments/action :: action(${redirect}, 'bi-circle-fill')}"></th:block>
+			</th:block>
+		</div>
+
 		<!-- Actions -->
 		<div class="actions">
 			<th:block th:each="action : *{actions}">
-				<th:block th:replace="~{:: action(${action})}"></th:block>
+				<th:block th:replace="~{fragments/action :: action(${action}, 'bi-circle')}"></th:block>
 			</th:block>
 		</div>
 
@@ -47,7 +54,7 @@
 		<div class="text">[(*{text})]</div>
 		<div class="actions">
 			<th:block th:each="action : *{actions}">
-				<th:block th:replace="~{:: action(${action})}"></th:block>
+				<th:block th:replace="~{fragments/action :: action(${action}, 'bi-circle')}"></th:block>
 			</th:block>
 		</div>
 		<div th:if="*{endExploration}" class="end-exploration">La Exploración finaliza.</div>

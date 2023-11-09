@@ -5,11 +5,11 @@
 	
 	"actions": [
 		{
-			"requirements": [{ "secret": 66 }],
+			"requirements": [{ "secret": { "id": 66 }}],
 			"goToVerse": "4"
 		},
 		{
-			"requirements": [{ "status": { "name": "La marca del cazador" } }],
+			"requirements": [{ "status": { "name": "La marca del cazador" }}],
 			"goToVerse": "6"
 		},
 		{
