@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- ------ -->
+	<!-- ACTION -->
+	<!-- ------ -->
+	<div th:fragment="action(action)" th:object="${action}" class="action">
+		<!-- Icon -->
+		<i class="bi bi-circle"></i>
+		
+		<!-- Text -->
+		<span class="text">[[*{action}]] -</span>
+		
+		<!-- Requirements -->
+
+		<!-- Description -->
+		<span th:if="*{description}" class="description">[[*{description}]].</span>
+
+		<!-- Go to verse -->
+		<span class="go-to-verse">Ve al Versículo [[*{goToVerse}]].</span>
+	</div>
+</body>
+</html>

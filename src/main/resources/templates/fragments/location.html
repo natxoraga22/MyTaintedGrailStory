@@ -36,17 +36,6 @@
 	</div>
 
 
-	<!-- ------ -->
-	<!-- ACTION -->
-	<!-- ------ -->
-	<div th:fragment="action(action)" th:object="${action}" class="action">
-		<i class="bi bi-circle"></i>
-		<span class="text">[[*{action}]] -</span>
-		<span th:if="*{description}" class="description">[[*{description}]].</span>
-		<span class="go-to-verse">Ve al Versículo [[*{goToVerse}]].</span>
-	</div>
-
-
 	<!-- ----- -->
 	<!-- VERSE -->
 	<!-- ----- -->

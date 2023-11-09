@@ -5,6 +5,14 @@
 
 	"actions": [
 		{
+			"requirements": [{ "secret": { "id": 66 }}],
+			"goToVerse": "4"
+		},
+		{
+			"requirements": [{ "status": { "name": "La marca del cazador" }}],
+			"goToVerse": "6"
+		},
+		{
 			"action": "Visitas a las familias de los campeones de la primera expedición",
 			"description": "Si quieres encontrarlos, podría serte útil saber más de ellos",
 			"goToVerse": "1"

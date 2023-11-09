@@ -1,7 +1,5 @@
 package txraga.mystory.taintedgrail.model;
 
-import java.util.List;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,13 +10,8 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Action {
-	
-	private String action;
-	private String description;
+public class Secret {
 
-	private List<Requirement> requirements;
-
-	private String goToVerse;
+	private int id;
 
 }
