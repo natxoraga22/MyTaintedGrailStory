@@ -1,16 +1,74 @@
 
-.location .title {
+/* -------- */
+/* LOCATION */
+/* -------- */
+
+.location {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.location > .title {
+	margin-bottom: 0;
 	font-family: var(--font-celtic-garamond);
 	font-size: 20pt;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-.location .title .name::first-letter {
+.location > .title .name::first-letter {
 	font-size: 1.5em;
 }
 
 .location .introduction {
 	font-family: var(--font-blacker-text);
 	font-style: italic;
+	font-size: 11pt;
+}
+
+
+/* ------ */
+/* VERSES */
+/* ------ */
+
+.verses {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	margin-top: 1rem;
+}
+
+.verses .verse {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.verses .verse .title {
+	margin-bottom: 0;
+}
+
+.verses .verse .title .id {
+	margin-right: 1rem;
+	font-family: var(--font-alegreya);
+	font-weight: 700;
+}
+
+.verses .verse .text {
+	font-family: var(--font-blacker-text);
+	font-style: italic;
+	font-size: 11pt;
+}
+
+.verses .verse .text p {
+	margin-bottom: 0.5rem;
+}
+
+.verses .verse .end-exploration {
+	font-family: var(--font-alegreya);
 }

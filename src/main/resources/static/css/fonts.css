@@ -18,7 +18,20 @@
 	font-style: italic;
 }
 
+@font-face {
+	font-family: 'Alegreya';
+	src: url('/fonts/Alegreya-Regular.ttf') format('truetype');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Alegreya';
+	src: url('/fonts/Alegreya-Italic.ttf') format('truetype');
+	font-style: italic;
+}
+
 :root {
 	--font-celtic-garamond: 'Celtic Garamond';
 	--font-blacker-text: 'Blacker Text';
+	--font-alegreya: 'Alegreya';
 }

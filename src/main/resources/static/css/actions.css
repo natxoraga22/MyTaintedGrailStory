@@ -1,0 +1,39 @@
+
+/* ------- */
+/* ACTIONS */
+/* ------- */
+
+.actions {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.actions .action {
+	margin-left: 1rem;
+	line-height: 22px;
+}
+
+.actions .action .bi-circle {
+	margin-right: 0.25rem;
+	font-size: 0.5em;
+	line-height: 24px;
+	vertical-align: text-top;
+}
+
+.actions .action .text {
+	font-family: var(--font-alegreya);
+	font-weight: 700;
+	font-style: normal;
+	font-size: 12pt;
+}
+
+.actions .action .description {
+	font-family: var(--font-blacker-text);
+	font-style: italic;
+	font-size: 11pt;
+}
+
+.actions .action .go-to-verse {
+	font-family: var(--font-alegreya);
+}

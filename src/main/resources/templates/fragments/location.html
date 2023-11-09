@@ -19,6 +19,49 @@
 		<div class="introduction">
 			[[*{introduction}]]
 		</div>
+
+		<!-- Actions -->
+		<div class="actions">
+			<th:block th:each="action : *{actions}">
+				<th:block th:replace="~{:: action(${action})}"></th:block>
+			</th:block>
+		</div>
+
+		<!-- Verses -->
+		<div class="verses">
+			<th:block th:each="verse : *{verses}">
+				<th:block th:replace="~{:: verse(${verse})}"></th:block>
+			</th:block>
+		</div>
+	</div>
+
+
+	<!-- ------ -->
+	<!-- ACTION -->
+	<!-- ------ -->
+	<div th:fragment="action(action)" th:object="${action}" class="action">
+		<i class="bi bi-circle"></i>
+		<span class="text">[[*{action}]] -</span>
+		<span th:if="*{description}" class="description">[[*{description}]].</span>
+		<span class="go-to-verse">Ve al Versículo [[*{goToVerse}]].</span>
+	</div>
+
+
+	<!-- ----- -->
+	<!-- VERSE -->
+	<!-- ----- -->
+	<div th:fragment="verse(verse)" th:object="${verse.value}" class="verse">
+		<h3 class="title" bs:flex bs:flexAlign="center">
+			<div class="id">[[${verse.key}]]</div>
+			<hr class="border-2" bs:flexGrow="1">
+		</h3>
+		<div class="text">[(*{text})]</div>
+		<div class="actions">
+			<th:block th:each="action : *{actions}">
+				<th:block th:replace="~{:: action(${action})}"></th:block>
+			</th:block>
+		</div>
+		<div th:if="*{endExploration}" class="end-exploration">La Exploración finaliza.</div>
 	</div>
 </body>
 </html>
