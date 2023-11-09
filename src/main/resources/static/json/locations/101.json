@@ -43,6 +43,11 @@
 					"action": "Haces que hablen con hidromiel",
 					"description": "Hay una antigua costumbre: aquellos que viajan lejos de su hogar deben pasar la noche en vela al volver. Mantener la tradición en honor de todos los que se fueron con la expedición y no volverán no será barato",
 					"goToVerse": "2"
+				},
+				{
+					"action": "Les pides que compartan sus problemas",
+					"requirements": [{ "attribute": { "name": "Empatía", "level": 1 } }],
+					"goToVerse": "2"
 				}
 			]
 		},

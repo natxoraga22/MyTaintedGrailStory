@@ -10,12 +10,9 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Requirement {
+public class Attribute {
 
-	private Status status;
-	private Secret secret;
-	private Boolean menhir;
-
-	private Attribute attribute;
-
+	private String name;
+	private int level;
+	
 }
