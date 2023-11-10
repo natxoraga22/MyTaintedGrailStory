@@ -46,3 +46,7 @@
 .requirements {
 	font-family: var(--font-alegreya);
 }
+
+.requirements .attribute img {
+	height: 20px;
+}

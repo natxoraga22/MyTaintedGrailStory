@@ -27,6 +27,10 @@
 					<i th:if="*{!menhir}" class="bi bi-x-lg text-danger align-middle"></i>
 					<strong>Menhir</strong>
 				</span>
+				<span th:if="*{attribute} != null" class="attribute">
+					[[*{attribute.level}]]
+					<img th:src="@{/img/attributes/{id}.png(id=*{#strings.toLowerCase(attribute.id)})}">
+				</span>
 			</th:block>
 			<strong>]</strong>
 		</span>

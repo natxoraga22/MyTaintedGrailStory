@@ -12,7 +12,17 @@ import lombok.ToString;
 @ToString
 public class Attribute {
 
-	private String name;
+	private Id id;
 	private int level;
+
+	
+	public enum Id {
+		AGGRESSION,
+		COURAGE,
+		PRACTICALITY,
+		EMPATHY,
+		CAUTION,
+		SPIRITUALITY
+	}
 	
 }

@@ -46,7 +46,7 @@
 				},
 				{
 					"action": "Les pides que compartan sus problemas",
-					"requirements": [{ "attribute": { "name": "Empatía", "level": 1 } }],
+					"requirements": [{ "attribute": { "id": "EMPATHY", "level": 1 }}],
 					"goToVerse": "2"
 				}
 			]
