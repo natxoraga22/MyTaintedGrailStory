@@ -20,4 +20,6 @@ public class Verse {
 
 	private List<Action> actions;
 
+	private List<Reward> rewards;
+
 }
