@@ -38,6 +38,10 @@
 	font-family: var(--font-alegreya);
 }
 
+.actions .action .end-exploration {
+	font-family: var(--font-alegreya);
+}
+
 
 /* ------------ */
 /* REQUIREMENTS */

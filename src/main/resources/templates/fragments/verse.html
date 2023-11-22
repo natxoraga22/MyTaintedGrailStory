@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- ----- -->
+	<!-- VERSE -->
+	<!-- ----- -->
+	<div th:fragment="verse(verseId,verse)" th:object="${verse}" class="verse">
+		<!-- Title -->
+		<h3 class="title" bs:flex bs:flexAlign="center">
+			<div class="id">[[${verseId}]]</div>
+			<hr class="border-2" bs:flexGrow="1">
+		</h3>
+
+		<!-- Text -->
+		<div class="text">[(*{text})]</div>
+
+		<!-- Rewards -->
+		<div th:if="*{!#lists.isEmpty(rewards)}" class="rewards">
+			<th:block th:each="reward : *{rewards}">
+				<th:block th:replace="~{:: reward(${reward})}"></th:block>
+			</th:block>
+		</div>
+
+		<!-- Actions -->
+		<div th:if="*{!#lists.isEmpty(actions)}" class="actions">
+			<th:block th:each="action : *{actions}">
+				<th:block th:replace="~{fragments/action :: action(${action}, 'bi-circle')}"></th:block>
+			</th:block>
+		</div>
+
+		<!-- End exploration -->
+		<div th:if="*{endExploration}" class="end-exploration">La Exploración finaliza.</div>
+	</div>
+
+
+	<!-- ------ -->
+	<!-- REWARD -->
+	<!-- ------ -->
+	<div th:fragment="reward(reward)" th:object="${reward}" class="reward">
+		<!-- Status -->
+		<span th:if="*{status} != null">
+			<span th:if="*{#lists.isEmpty(status.parts)}">Obtienes el Estado</span>
+			<span th:if="*{#lists.size(status.parts)} == 1">Obtienes la parte [[*{status.parts[0]}]] del Estado</span>
+			<span th:if="*{#lists.size(status.parts)} > 1">Obtienes las partes [[*{#strings.listJoin(status.parts,', ')}]] del Estado</span>
+			<strong>«[[*{status.name}]]»</strong>.
+		</span>
+	</div>
+</body>
+</html>

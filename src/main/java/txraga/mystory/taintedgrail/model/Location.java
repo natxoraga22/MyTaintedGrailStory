@@ -23,5 +23,7 @@ public class Location {
 	private List<Action> actions;
 
 	private Map<String,Verse> verses;
+	private Verse dream;
+	private Verse nightmare;
 
 }

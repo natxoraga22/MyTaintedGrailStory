@@ -1,0 +1,56 @@
+
+/* ------ */
+/* VERSES */
+/* ------ */
+
+.verses {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	margin-top: 1rem;
+}
+
+.verse {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.verse .title {
+	margin-bottom: 0;
+}
+
+.verse .title .id {
+	margin-right: 1rem;
+	font-family: var(--font-alegreya);
+	font-weight: 700;
+}
+
+.verse .text {
+	margin-bottom: 0.5rem;
+	font-family: var(--font-blacker-text);
+	font-style: italic;
+	font-size: 10.5pt;
+}
+
+.verse .text p {
+	margin-bottom: 0.5rem;
+}
+
+.verse .text p:last-of-type {
+	margin-bottom: 0;
+}
+
+.verse .end-exploration {
+	font-family: var(--font-alegreya);
+}
+
+
+/* ------- */
+/* REWARDS */
+/* ------- */
+
+.rewards {
+	font-family: var(--font-alegreya);
+}

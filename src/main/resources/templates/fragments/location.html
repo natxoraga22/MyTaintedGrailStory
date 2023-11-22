@@ -37,27 +37,15 @@
 		<!-- Verses -->
 		<div class="verses">
 			<th:block th:each="verse : *{verses}">
-				<th:block th:replace="~{:: verse(${verse})}"></th:block>
+				<th:block th:replace="~{fragments/verse :: verse(${verse.key},${verse.value})}"></th:block>
 			</th:block>
 		</div>
-	</div>
-
-
-	<!-- ----- -->
-	<!-- VERSE -->
-	<!-- ----- -->
-	<div th:fragment="verse(verse)" th:object="${verse.value}" class="verse">
-		<h3 class="title" bs:flex bs:flexAlign="center">
-			<div class="id">[[${verse.key}]]</div>
-			<hr class="border-2" bs:flexGrow="1">
-		</h3>
-		<div class="text">[(*{text})]</div>
-		<div class="actions">
-			<th:block th:each="action : *{actions}">
-				<th:block th:replace="~{fragments/action :: action(${action}, 'bi-circle')}"></th:block>
-			</th:block>
+		
+		<!-- Dream & nightmare -->
+		<div class="dream-nightmare">
+			<th:block th:replace="~{fragments/verse :: verse('SUEÑO',*{dream})}"></th:block>
+			<th:block th:replace="~{fragments/verse :: verse('PESADILLA',*{nightmare})}"></th:block>
 		</div>
-		<div th:if="*{endExploration}" class="end-exploration">La Exploración finaliza.</div>
 	</div>
 </body>
 </html>

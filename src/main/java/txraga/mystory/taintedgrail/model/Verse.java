@@ -16,10 +16,8 @@ public class Verse {
 	
 	private String id;
 	private String text;
-	private boolean endExploration;
-
-	private List<Action> actions;
-
 	private List<Reward> rewards;
+	private List<Action> actions;
+	private boolean endExploration;
 
 }

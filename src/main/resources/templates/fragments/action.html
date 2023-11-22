@@ -42,7 +42,11 @@
 		<span th:if="*{description}" class="description">[[*{description}]].</span>
 
 		<!-- Go to verse -->
-		<span class="go-to-verse">Ve al Versículo [[*{goToVerse}]].</span>
+		<span th:if="*{goToVerse}" class="go-to-verse">Ve al Versículo [[*{goToVerse}]].</span>
+		<span th:if="*{goToBosVerse}" class="go-to-verse">Ve al Versículo [[*{goToBosVerse}]] del L<small>DL</small>S.</span>
+
+		<!-- End exploration -->
+		<span th:if="*{endExploration}" class="end-exploration">La Exploración finaliza.</span>
 	</div>
 </body>
 </html>
