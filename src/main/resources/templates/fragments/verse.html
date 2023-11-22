@@ -20,6 +20,16 @@
 		<!-- Text -->
 		<div class="text">[(*{text})]</div>
 
+		<!-- Test results -->
+		<div th:if="*{!#maps.isEmpty(testResults)}" class="test-results">
+			<div th:each="testResult : *{testResults}" class="test-result">
+				<span class="result">[[${testResult.key}]]</span>
+				<bs:icon icon="dash"></bs:icon>
+				<span class="text">[[${testResult.value.text}]]</span>
+				<span th:if="${testResult.value.endExploration}" class="end-exploration">La Exploración finaliza.</span>
+			</div>
+		</div>
+
 		<!-- Rewards -->
 		<div th:if="*{!#lists.isEmpty(rewards)}" class="rewards">
 			<th:block th:each="reward : *{rewards}">
