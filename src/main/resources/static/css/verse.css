@@ -19,12 +19,12 @@
 
 .verse .title {
 	margin-bottom: 0;
+	font-family: var(--font-alegreya);
+	font-weight: 700;
 }
 
 .verse .title .id {
 	margin-right: 1rem;
-	font-family: var(--font-alegreya);
-	font-weight: 700;
 }
 
 .verse .text {
@@ -32,6 +32,10 @@
 	font-family: var(--font-blacker-text);
 	font-style: italic;
 	font-size: 10.5pt;
+}
+
+.verse .text:last-child {
+	margin-bottom: 0;
 }
 
 .verse .text p {

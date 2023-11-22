@@ -29,3 +29,27 @@
 	font-style: italic;
 	font-size: 11pt;
 }
+
+
+/* ----------------- */
+/* DREAM & NIGHTMARE */
+/* ----------------- */
+
+.dream-nightmare {
+	margin-top: 2rem;
+}
+
+.dream-nightmare .card-body {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.dream-nightmare .title {
+	font-size: 11pt;
+	text-align: center;
+}
+
+.dream-nightmare .title::first-letter {
+	font-size: 1.25em;
+}

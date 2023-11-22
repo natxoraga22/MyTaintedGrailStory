@@ -7,11 +7,14 @@
 	<!-- ----- -->
 	<!-- VERSE -->
 	<!-- ----- -->
-	<div th:fragment="verse(verseId,verse)" th:object="${verse}" class="verse">
+	<div th:fragment="verse(verseId,verse,dreamOrNightmare)" th:object="${verse}" class="verse">
 		<!-- Title -->
-		<h3 class="title" bs:flex bs:flexAlign="center">
+		<h3 th:if="${!dreamOrNightmare}" class="title" bs:flex bs:flexAlign="center">
 			<div class="id">[[${verseId}]]</div>
 			<hr class="border-2" bs:flexGrow="1">
+		</h3>
+		<h3 th:if="${dreamOrNightmare}" class="title">
+			[[${verseId}]]
 		</h3>
 
 		<!-- Text -->

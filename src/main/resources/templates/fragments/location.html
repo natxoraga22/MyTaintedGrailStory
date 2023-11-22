@@ -37,15 +37,17 @@
 		<!-- Verses -->
 		<div class="verses">
 			<th:block th:each="verse : *{verses}">
-				<th:block th:replace="~{fragments/verse :: verse(${verse.key},${verse.value})}"></th:block>
+				<th:block th:replace="~{fragments/verse :: verse(${verse.key},${verse.value},false)}"></th:block>
 			</th:block>
 		</div>
 		
 		<!-- Dream & nightmare -->
-		<div class="dream-nightmare">
-			<th:block th:replace="~{fragments/verse :: verse('SUEÑO',*{dream})}"></th:block>
-			<th:block th:replace="~{fragments/verse :: verse('PESADILLA',*{nightmare})}"></th:block>
-		</div>
+		<bs:card class="dream-nightmare">
+			<bs:cardBody>
+				<th:block th:replace="~{fragments/verse :: verse('SUEÑO',*{dream},true)}"></th:block>
+				<th:block th:replace="~{fragments/verse :: verse('PESADILLA',*{nightmare},true)}"></th:block>
+			</bs:cardBody>
+		</bs:card>
 	</div>
 </body>
 </html>
